@@ -2,7 +2,7 @@
 def apply_all_func(int_list,*functions):
     res={}
     for i in functions:
-        res[i.__name__]=(i(int_list))
+        res[i.__name__]=i(int_list)
     return res
 
 

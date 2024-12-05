@@ -1,3 +1,5 @@
+from random import random
+
 first = 'Мама мыла раму'
 second = 'Рамена мало было'
 
@@ -13,4 +15,21 @@ def get_advanced_writer(file_name):
 write = get_advanced_writer('example.txt')
 write('Это строчка', ['А', 'это', 'уже', 'число', 5, 'в', 'списке'])
 
+import random
+
 class MysticBall:
+    def __call__(self):
+        return random.choice(self.words)
+
+    def __init__(self,*strings):
+        self.words=[]
+        for i in strings:
+            self.words.append(i)
+
+first_ball = MysticBall('Да', 'Нет', 'Наверное')
+print(first_ball())
+print(first_ball())
+print(first_ball())
+
+
+
